@@ -1,0 +1,77 @@
+/* Definição de cores */
+:root {
+    --primary-color: #001524;  /* Azul escuro */
+    --secondary-color: #445D48;  /* Verde escuro */
+    --accent-color: #D6CC99;  /* Bege */
+    --background-color: #FDE5D4;  /* Pêssego claro */
+    --text-color: #333;  /* Cor do texto padrão */
+}
+
+/* Estilização geral */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 1rem;
+}
+
+nav a {
+    margin: 0 1rem;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+h1, h2 {
+    color: var(--secondary-color);
+}
+
+/* Estilo para as seções */
+#bookCatalog, #faqSection, #upcomingPresentations {
+    border: 2px solid var(--accent-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--background-color);
+}
+
+/* Flexbox para FAQs e Próximas Palestras */
+#faqAndPresentations {
+    display: flex;
+    justify-content: space-between;
+}
+
+#faqSection, #upcomingPresentations {
+    width: 48%;  /* para dar um pouco de espaço entre eles */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+/* Estilo para o hub de postagens */
+.post {
+    border: 1px solid var(--secondary-color);
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
