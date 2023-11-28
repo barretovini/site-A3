@@ -57,7 +57,7 @@ h1, h2 {
 }
 
 #faqSection, #upcomingPresentations {
-    width: 48%;  /* para dar um pouco de espaço entre eles */
+    width: 48%;
 }
 
 /* Estilo para o rodapé */
@@ -83,43 +83,48 @@ header h1 img {
 /* Estilo para o carrossel */
 .carousel {
     display: flex;
-    overflow-x: scroll; /* Permite rolagem horizontal */
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
 
 .carousel-slide {
-    flex: 0 0 100%; /* Cada slide ocupa 100% da largura do carrossel */
+    flex: 0 0 100%;
     scroll-snap-align: start;
-    text-align: center; /* Centraliza a imagem dentro do slide */
-    position: relative; /* Posicionamento relativo para controlar os elementos internos */
+    text-align: center;
+    position: relative;
 }
 
 .carousel-image {
-    width: 80%; /* Largura completa do slide */
-    height: 65%; /* Altura completa do slide */
-    object-fit: fill; /* Estica a imagem para preencher o espaço */
+    width: 80%;
+    height: 65%;
+    object-fit: fill;
 }
 
 #bookCarousel {
-    justify-content: start; /* Alinha os slides ao início */
-    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+    justify-content: start;
+    overflow-x: hidden;
 }
 
+/* Estilo para o vídeo e seu contêiner */
 #videoPopup {
-    position: fixed; /* Faz o popup cobrir toda a tela */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Fundo escuro semi-transparente */
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible;
+    overflow: hidden;
 }
 
 #videoContainer {
     position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 #closeBtn {
@@ -127,34 +132,33 @@ header h1 img {
     top: 0;
     right: 0;
     padding: 10px;
-    width: auto; /* ou um valor específico */
-    height: auto; /* ou um valor específico */
+    width: auto;
+    height: auto;
     background: red;
     color: white;
     border: none;
     cursor: pointer;
     z-index: 1001;
-
 }
 
 .ceo-profile {
-            display: flex;
-            align-items: center;
-        }
+    display: flex;
+    align-items: center;
+}
 
 .ceo-description {
-            margin-left: 20px; /* Adicione margem entre a imagem e o texto */
-        }
+    margin-left: 20px;
+}
 
 .ceo-profile img {
-            width: 100px; /* Ajuste para o tamanho desejado da imagem */
-            height: 150px; /* Ajuste para o tamanho desejado da imagem */
-            margin-bottom: 10px; /* Adicione uma margem inferior de 10px */
-        }
+    width: 100px;
+    height: 150px;
+    margin-bottom: 10px;
+}
 
 .whatsapp-widget {
     display: inline-block;
-    background-color: #25D366; /* Cor verde do WhatsApp */
+    background-color: #25D366;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -164,7 +168,7 @@ header h1 img {
 }
 
 .whatsapp-widget:hover {
-    background-color: #128C7E; /* Um tom mais escuro para o hover */
+    background-color: #128C7E;
 }
 
 .carousel-item {
@@ -175,27 +179,52 @@ header h1 img {
     display: block;
 }
 
-
-@media only screen and (max-width: 600px) {
+/* Ajustes gerais para dispositivos móveis */
+@media only screen and (max-width: 414px) {
     #videoContainer {
-        width: 80%; /* Reduz o tamanho do contêiner para melhor ajuste */
-        height: auto; /* Altura automática baseada no conteúdo */
-        margin: 0 auto; /* Centraliza o contêiner na tela */
+        width: calc(100% - 20px); /* Ajusta a largura para não ultrapassar a tela */
+        height: auto; /* A altura é ajustada automaticamente */
+        margin: 10px auto; /* Adiciona margens superior e inferior */
+        box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
     }
-#videoPopup {
-    display: flex;
-    align-items: center; /* Alinha verticalmente ao centro */
-    justify-content: center; /* Alinha horizontalmente ao centro */
-    height: 100%; /* Altura total da tela */
-}
-}
 
-@media only screen and (max-width: 600px) {
     #closeBtn {
-        top: 5px; /* Posicionamento ligeiramente diferente */
-        right: 5px;
-        width: 35px; /* Tamanho ajustado para telas menores */
-        height: 35px;
+        top: 5px; /* Ajuste o posicionamento conforme necessário */
+        right: 5px; /* Ajuste o posicionamento conforme necessário */
+        width: 35px; /* Tamanho fixo para o botão de fechar */
+        height: 35px; /* Tamanho fixo para o botão de fechar */
+    }
+    
+    /* Certifique-se de que todos os elementos considerem as margens e paddings em seu tamanho */
+    *, *::before, *::after {
+        box-sizing: border-box;
     }
 }
 
+/* Ajustes específicos para o iPhone XR em modo paisagem */
+@media only screen and (min-device-pixel-ratio: 2) and (min-width: 414px) and (max-width: 828px) {
+    /* Os mesmos ajustes do bloco acima, se necessário */
+}
+
+/* Ajustes específicos para o iPhone XR em modo retrato */
+@media only screen and (min-device-pixel-ratio: 2) and (max-width: 414px) {
+    /* Os mesmos ajustes do bloco acima, se necessário */
+}
+
+/* Adiciona estilos responsivos ao contêiner do vídeo */
+.responsive-video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Mantém a proporção de 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.responsive-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+}
