@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós</title>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">
     <link rel="stylesheet" href="assets/styles/styles.css">
+
 </head>
 <body>
     <header>
-    <h1><a href="index.html" style="text-decoration: none; color: inherit;">ACS Produções Literárias</a></h1>
+    <h1>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <img src="assets/images/icon.png" alt="ACS Produções Literárias">
+        </a>
+    </h1>
     <nav>
         <a href="about.html">Sobre nós</a>
-        <a href="services.html">Serviços</a>
-        <a href="testimonials.html">Depoimentos</a>
+        <a href="services.html">Livros</a>
         <a href="terms.html">Termos e Condições</a>
     </nav>
     </header>
@@ -24,25 +29,42 @@
 
         </section>
 
-        <section id="ceo-introduction">
-            <h2>Apresentação dos CEO's</h2>
-            <div class="ceo-profile">
+       <section id="ceo-sandra" class="ceo-profile">
+            <img src="assets/images/sandra.jpg" alt="Sandra Auristela">
+            <div class="ceo-description">
                 <h3>Sandra Auristela</h3>
                 <p>Sandra Auristela nasceu em janeiro de 1970 na cidade de São Paulo, graduada pela Universidade de Guarulhos em Desenho industrial/Comunicação visual e pós-graduada em marketing e comunicação pela Fundação Cásper líbero, atua como designer e analista de comunicação e marketing há mais de 20 anos.</p>
             </div>
-            <div class="ceo-profile">
+        </section>
+
+        <!-- Seção CEO Celso -->
+        <section id="ceo-celso" class="ceo-profile">
+            <img src="assets/images/celso.jpg" alt="Celso Santos">
+            <div class="ceo-description">
                 <h3>Celso Santos</h3>
                 <p>Celso Santos nasceu em Agosto de 1970 na cidade de São Paulo. Escritor, expositor, locutor, sonoplasta, produtor, programador musical e operador de rádio há mais de trinta anos.</p>
             </div>
-            <!-- ... mais perfis de CEO, se necessário ... -->
         </section>
+<a href="https://api.whatsapp.com/send?phone=5511991314512&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20compra%20de%20livros." 
+   class="whatsapp-widget">
+   Compre conosco pelo WhatsApp
+</a>
     </main>
 
     <footer>
         <p>2023 - ACS Produções Literárias ™</p> <!-- Mesmo conteúdo do footer da página inicial -->
         <p>Contato: Email: acsproducoesliterarias@gmail.com</p>
-        <p>Telefone: (11) 96590-1403</p>
+        <p>Telefone: (11) 99131-4512</p>
     </footer>
+<div id="videoPopup" style="display:none;">
+    <div id="videoContainer">
+        <button id="closeBtn">Fechar</button>
+        <video width="640" height="360" controls>
+            <source src="assets/video/pai.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>

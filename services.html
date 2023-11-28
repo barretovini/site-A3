@@ -4,45 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços</title>
+    <link rel="icon" type="image/png" href="assets/images/icon.png">   
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
     <header>
-        <h1><a href="index.html" style="text-decoration: none; color: inherit;">ACS Produções Literárias</a></h1>
+        <h1>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <img src="assets/images/icon.png" alt="ACS Produções Literárias">
+        </a>
+    </h1>
         <nav>
-            <a href="about.html">Sobre nós</a>
-            <a href="services.html">Serviços</a>
-            <a href="testimonials.html">Depoimentos</a>
-            <a href="terms.html">Termos e Condições</a>
-        </nav>
+        <a href="about.html">Sobre nós</a>
+        <a href="services.html">Livros</a>
+        <a href="terms.html">Termos e Condições</a>
+    </nav>
     </header>
 
     <main>
-        <section id="post-hub">
-            <h2>Últimas Postagens</h2>
-            
-            <!-- Exemplo de Postagem -->
-            <article class="post">
-                <h3>Postagem 1</h3>
-                <p>Esta é uma breve descrição da postagem 1.</p>
-            </article>
-
-            <!-- Exemplo de Postagem -->
-            <article class="post">
-                <h3>Postagem 2</h3>
-                <p>Esta é uma breve descrição da postagem 2.</p>
-            </article>
-
-            <!-- ... mais postagens ... -->
+       <section id="bookCatalog">
+            <h2>Catálogo de Livros</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar livros...">
+            <div id="bookList"></div>
         </section>
+	<section id="testimonials">
+    	<h2>Depoimentos</h2>
+    	<div id="testimonialCarousel" class="carousel"></div>
+</section>
+
+<a href="https://api.whatsapp.com/send?phone=5511991314512&text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20compra%20de%20livros." 
+   class="whatsapp-widget">
+   Compre conosco pelo WhatsApp
+</a>
     </main>
 
     <footer>
         <p>2023 - ACS Produções Literárias ™</p>
         <p>Contato: Email: acsproducoesliterarias@gmail.com</p>
-        <p>Telefone: (11) 96590-1403</p>
+        <p>Telefone: (11) 99131-4512</p>
     </footer>
 
+     <script src="data/books.js"></script>
+    <script src="data/presentation.js"></script>
+    <script src="data/faq.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

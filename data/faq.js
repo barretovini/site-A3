@@ -1,14 +1,14 @@
 const faqs = [
     {
-        question: "Como posso comprar um livro?",
-        answer: "Você pode comprar nossos livros diretamente em nosso site ou em lojas parceiras."
+        question: "Qual prazo de entrega dos livros?",
+        answer: "O prazo de entrega e de 3 a 7 dias dependendo da sua região. O prazo exato pode ser conferido durante o processo da compra."
     },
     {
-        question: "Onde estão localizadas as palestras?",
-        answer: "As informações sobre as localizações das palestras serão atualizadas em nosso site."
+        question: "Como faço para realizar compras pelo site?",
+        answer: "Basta clicar no livro desejado e seguir as etapas do carrinho de compras e finalizar seu pedido."
     },
     {
-        question: "Quais são os termos e condições?",
-        answer: "Você pode encontrar nossos termos e condições na página apropriada do nosso site."
+        question: "Como entrar em contato com a empresa?",
+        answer: "Para entrar em contato temos redes sociais e também nosso site onde encontra suas principais informações."
     }
 ];
